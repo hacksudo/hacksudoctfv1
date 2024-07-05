@@ -17,19 +17,25 @@ Make sure you have Docker installed on your system. If you don't have Docker ins
     ```sh
     chmod 777 auto_setup.sh && bash auto_setup.sh
     ```
-1. Now do manual by Update your existing list of packages:
+2. In case any issue not work then find proccess id of current docker and and stop it and do them again.
+    ```sh
+    docker ps
+    ```
+   and then stop current container |
+   docker stop and containerID 
+3. Now do manual by Update your existing list of packages:
 
     ```sh
     sudo apt-get update
     ```
 
-2. Install Docker:
+4. Install Docker:
 
     ```sh
     sudo apt-get install docker.io
     ```
 
-3. Verify that Docker is installed correctly by running:
+5. Verify that Docker is installed correctly by running:
 
     ```sh
     sudo docker --version
