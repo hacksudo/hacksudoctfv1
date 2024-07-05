@@ -12,13 +12,12 @@ Make sure you have Docker installed on your system. If you don't have Docker ins
 
 ### Install Docker
 #### For Ubuntu:
-**AUTO setup**
-Automatic Setup whole HacksudoCTFv1 using auto_setup.sh file ,you dont need to do all below steps if incase any issue you can go with manual setup methods.
+
+1. Automatic Setup whole HacksudoCTFv1 using auto_setup.sh file ,you dont need to do all below steps if incase any issue you can go with manual setup methods.
     ```sh
     chmod 777 auto_setup.sh && bash auto_setup.sh
     ```
-**MANUAL setup**
-1. Update your existing list of packages:
+1. Now do manual by Update your existing list of packages:
 
     ```sh
     sudo apt-get update
