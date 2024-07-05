@@ -26,6 +26,10 @@ Make sure you have Docker installed on your system. If you don't have Docker ins
    ```sh
     docker stop (containerID here)
     ```
+   Again Run auto_setup.sh this is auto setup script   
+    ```sh
+    bash auto_setup.sh
+    ```
 4. Now do manual by Update your existing list of packages:
 
     ```sh
