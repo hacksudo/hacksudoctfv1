@@ -19,6 +19,7 @@ Make sure you have Docker installed on your system. If you don't have Docker ins
     chmod 777 auto_setup.sh && bash auto_setup.sh
     ```
 3. In case any issue not work then find proccess id of current docker and and stop it and do them again.
+
    a) check procces of container
    ```sh
     docker ps
