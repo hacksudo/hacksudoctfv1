@@ -1,5 +1,3 @@
-Here's the updated README file with the added challenge description:
-
 ---
 
 # Web CTF Boot to Root
