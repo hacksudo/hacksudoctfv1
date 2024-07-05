@@ -2,7 +2,7 @@
 
 # Web CTF Boot to Root
 
-Welcome to the Web CTF Boot to Root challenge hosted on Docker. This repository contains a simple CTF challenge designed to test basic web security skills. The challenge includes a website hosted on port 80 with various tasks to complete.
+Welcome to the Web CTF Boot to Root challenge hosted on Docker. This repository contains a simple CTF challenge that is designed to test basic web security skills. The challenge includes a website hosted on port 80 with a very easy task to get you started.Created By me @Vishal Waghmare instagram@realvilu
 
 ## Quick Start
 
@@ -45,8 +45,16 @@ docker pull hacksudov1/hacksudoctfv1
 Once the image is downloaded, run the Docker container with the following command:
 
 ```sh
-docker run -d -p 8080:80 hacksudoctfv1
+docker run -d -p 8080:80 hacksudov1/hacksudoctfv1
 ```
+
+To find the IP address of the running Docker container, you can use the following command:
+
+```sh
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container_id>
+```
+
+Replace `<container_id>` with the actual container ID.
 
 ### Access the Challenge
 
@@ -54,19 +62,31 @@ Open your web browser and navigate to `http://localhost:8080` to access the CTF 
 
 ## Challenge Description
 
-This CTF challenge is designed to be beginner-friendly, providing a good starting point for those new to web security. The challenge consists of the following tasks:
+This CTF challenge is designed to be very easy, providing a good starting point for beginners in web security. The challenge consists of the following steps:
 
-1. **Compromise Web Admin:**
-   - Your first task is to compromise the web admin account. This might involve finding and exploiting vulnerabilities in the website.
+1. **Compromise Web Admin**: Gain access to the web admin by exploiting any vulnerability in the website.
+2. **Get Shell Access**: Achieve shell access with `www-data` privileges by exploiting an OWASP Top 10 vulnerability such as Remote Code Execution (RCE).
+3. **Get Root Access**: Escalate your privileges to root. Find and read the contents of the `/root/root.txt` file.
 
-2. **Get Shell Access:**
-   - After compromising the web admin, escalate your access to gain a shell as the `www-data` user. This will likely involve exploiting an OWASP Top 10 vulnerability, such as Remote Code Execution (RCE).
+### Steps to Complete the Challenge
 
-3. **Get Root Access:**
-   - With shell access as `www-data`, further escalate your privileges to gain root access. 
+1. **Find the IP Address of the Docker Container**:
+   
+   ```sh
+   docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container_id>
+   ```
 
-4. **Capture the Flag:**
-   - Locate the file `/root/root.txt` and read its contents to capture the flag.
+2. **Access the Web Admin Interface**:
+   
+   Navigate to `http://localhost:8080` or use the container's IP address if accessing from a different machine.
+
+3. **Exploit an OWASP Top 10 Vulnerability**:
+   
+   Identify and exploit a vulnerability in the web application to gain shell access as `www-data`.
+
+4. **Privilege Escalation**:
+   
+   Escalate your privileges to root and find the `/root/root.txt` file. Read the file to complete the challenge.
 
 ## Support
 
