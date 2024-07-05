@@ -14,35 +14,36 @@ Make sure you have Docker installed on your system. If you don't have Docker ins
 #### For Ubuntu:
 
 1. Automatic Setup whole HacksudoCTFv1 using auto_setup.sh file ,you dont need to do all below steps if incase any issue you can go with manual setup methods.
-    ```sh
+    run auto script with execute permission
+   ```sh
     chmod 777 auto_setup.sh && bash auto_setup.sh
     ```
-2. In case any issue not work then find proccess id of current docker and and stop it and do them again.
-    ```sh
+3. In case any issue not work then find proccess id of current docker and and stop it and do them again.
+   a) check procces of container
+   ```sh
     docker ps
     ```
-   and then stop current container |
-   docker stop and container
+   b) and then stop current container, docker stop and container
    ```sh
     docker stop (containerID here)
     ```
-   Again Run auto_setup.sh this is auto setup script   
+   c) Again Run auto_setup.sh this is auto setup script   
     ```sh
     bash auto_setup.sh
     ```
-4. Now do manual by Update your existing list of packages:
+5. Now do manual by Update your existing list of packages:
 
     ```sh
     sudo apt-get update
     ```
 
-5. Install Docker:
+6. Install Docker:
 
     ```sh
     sudo apt-get install docker.io
     ```
 
-6. Verify that Docker is installed correctly by running:
+7. Verify that Docker is installed correctly by running:
 
     ```sh
     sudo docker --version
