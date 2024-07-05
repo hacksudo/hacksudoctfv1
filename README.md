@@ -22,20 +22,23 @@ Make sure you have Docker installed on your system. If you don't have Docker ins
     docker ps
     ```
    and then stop current container |
-   docker stop and containerID 
-3. Now do manual by Update your existing list of packages:
+   docker stop and container
+   ```sh
+    docker stop (containerID here)
+    ```
+4. Now do manual by Update your existing list of packages:
 
     ```sh
     sudo apt-get update
     ```
 
-4. Install Docker:
+5. Install Docker:
 
     ```sh
     sudo apt-get install docker.io
     ```
 
-5. Verify that Docker is installed correctly by running:
+6. Verify that Docker is installed correctly by running:
 
     ```sh
     sudo docker --version
