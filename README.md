@@ -11,9 +11,13 @@ Welcome to the Web CTF Boot to Root challenge hosted on Docker. This repository 
 Make sure you have Docker installed on your system. If you don't have Docker installed, follow the steps below to install it.
 
 ### Install Docker
-
 #### For Ubuntu:
-
+**AUTO setup**
+Automatic Setup whole HacksudoCTFv1 using auto_setup.sh file ,you dont need to do all below steps if incase any issue you can go with manual setup methods.
+    ```sh
+    chmod 777 auto_setup.sh && bash auto_setup.sh
+    ```
+**MANUAL setup**
 1. Update your existing list of packages:
 
     ```sh
