@@ -22,30 +22,11 @@ done
 
 # Function to show progress bar
 show_progress() {
-  echo "
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+                                                                    +
-+                            Vishal Waghmare                         +
-+                                                                    +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  "
   for i in {1..100}; do
     echo -ne "Progress: $i%\r"
     sleep 0.05
   done
   echo -ne '\n'
-}
-
-# Function to show banner
-show_banner() {
-  echo "
- __    __       ___      .__   __.  __    __       _______. _______  __       _______ .___________.
-|  |  |  |     /   \\     |  \\ |  | |  |  |  |     /       ||   ____||  |     |   ____||           |
-|  |__|  |    /  ^  \\    |   \\|  | |  |  |  |    |   (----`|  |__   |  |     |  |__   \`---|  |----\`
-|   __   |   /  /_\\  \\   |  . \`  | |  |  |  |     \\   \\    |   __|  |  |     |   __|      |  |     
-|  |  |  |  /  _____  \\  |  |\\   | |  \`--'  | .----)   |   |  |____ |  \`----.|  |____     |  |     
-|__|  |__| /__/     \\__\\ |__| \\__|  \\______/  |_______/    |_______||_______||_______|    |__|     
-  "
 }
 
 # Run commands with or without verbosity
@@ -62,9 +43,6 @@ run_command() {
   
   kill $PROGRESS_PID
 }
-
-# Show banner
-show_banner
 
 # Update package list
 run_command sudo apt-get update
