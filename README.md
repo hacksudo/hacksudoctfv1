@@ -48,6 +48,12 @@ Once the image is downloaded, run the Docker container with the following comman
 docker run -d -p 8080:80 hacksudov1/hacksudoctfv1
 ```
 
+Find container_id run following command:
+
+```sh
+docker ps
+```
+
 To find the IP address of the running Docker container, you can use the following command:
 
 ```sh
